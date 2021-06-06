@@ -1,0 +1,13 @@
+import random as r
+rIntsLst = []
+rIntsDict = {}
+for b in range(0,100):
+    b += 1
+    ranVars = b
+    autoRanVars = str("ranVars" + " " + str(b))
+    i = r.randint(1,1000)
+    rIntsDict[autoRanVars] = i
+    rIntsLst.append(i)
+print (rIntsDict)
+
+print (list(rIntsDict.values()))
