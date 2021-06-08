@@ -1,13 +1,38 @@
 import random as r
+
+#   establishes a list and dictionary
 rIntsLst = []
 rIntsDict = {}
+
+#   creates a for loop
 for b in range(0,100):
+
+    #   reassigns (b) a new value for each iteration (n = n + 1)
     b += 1
+
+    #   assigns (ranVars) the value of (b) each iteration ([ranVars] = [ranVars] + 1)
     ranVars = b
-    autoRanVars = str("ranVars" + " " + str(b))
+
+    #   give formal syntax to a new variable (autoRanVars)
+    autoRanVars = str("ranVar" + " " + str(b))
+    
+    #   creates a new variable (i) which generates a random number between (1,1000)
     i = r.randint(1,1000)
+    
+    #   assigns the value (i) to the key (autoRanVars)
     rIntsDict[autoRanVars] = i
+
+    #   appends (i) to (rIntsList) !!!CURRENTLY UNUSED!!!
     rIntsLst.append(i)
+
+#   prints dictionary
 print (rIntsDict)
 
+#   prints the values in (rIntsDict)
 print (list(rIntsDict.values()))
+
+#creates for loop that formats all (rIntsDict) elements neatly
+for key, value in rIntsDict.items():
+    print(key, ' : ', value)
+
+#print (list(rIntsDict.values())[0])
